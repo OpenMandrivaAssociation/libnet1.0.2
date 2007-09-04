@@ -4,7 +4,7 @@
 Summary:	A C library for portable packet creation
 Name:		libnet%{major}
 Version:	1.0.2a
-Release:	%mkrel 4
+Release:	%mkrel 5
 License:	BSD
 Group:		System/Libraries
 URL:		http://www.packetfactory.net/libnet
@@ -30,7 +30,7 @@ test code for more detailed information
 Summary:	A C library for portable packet creation
 Group:		System/Libraries
 Provides:	%{mklibname net 1} = %{version}-%{release}
-Obsoletes:	%{mklibname net 1}
+Obsoletes:	%{mklibname net 1} < %{version}-%{release}
 
 %description -n %{libname}
 Libnet is an API to help with the construction and handling of network
@@ -49,12 +49,13 @@ Group:		Development/C
 Requires:	%{libname} = %{version}-%{release}
 Provides:	libnet%{major}-devel = %{version}-%{release}
 Provides:	net-devel = %{version}-%{release}
+Obsoletes:	net1.0-devel < {version}-%{release}
 Provides:	net1.0-devel = %{version}-%{release}
+Provides:       net%{major}-devel = %{version}-%{release}
+Obsoletes:	%{mklibname net 1}-devel < %{version}-%{release}
 Provides:	%{mklibname net 1}-devel = %{version}-%{release}
+Obsoletes:	%{mklibname net 1.0}-devel < %{version}-%{release}
 Provides:	%{mklibname net 1.0}-devel = %{version}-%{release}
-Obsoletes:	%{mklibname net 1}-devel
-Obsoletes:	%{mklibname net 1.0}-devel
-Obsoletes:	net1.0-devel
 Conflicts:	%{mklibname net 1.1.0}-devel
 Conflicts:	%{mklibname net 1.1.2}-devel
 
@@ -76,6 +77,8 @@ Summary:	Static development library for the libnet library
 Group:		Development/C
 Requires:	%{libname}-devel = %{version}-%{release}
 Provides:	libnet%{major}-static-devel = %{version}-%{release}
+Provides:       net1.0-static-devel = %{version}-%{release}
+Provides:       net%{major}-static-devel = %{version}-%{release}
 Obsoletes:	%{mklibname net 1}-static-devel
 Obsoletes:	%{mklibname net 1.0}-devel
 Obsoletes:	net1.0-devel

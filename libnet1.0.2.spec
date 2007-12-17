@@ -13,7 +13,6 @@ Patch0:		Libnet-1.0.2a-1.0.2a.diff
 Patch1:		libnet-1.0.2a-strings.patch
 BuildRequires:	libpcap-devel
 BuildRequires:	libtool
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 
 %description
 Libnet is an API to help with the construction and handling of network

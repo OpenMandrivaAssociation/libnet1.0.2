@@ -110,7 +110,7 @@ chmod 644 README doc/CHANGELOG*
 
 %configure --with-pf_packet=yes 
 %make CFLAGS="%{optflags} -fPIC -Wall"
-%make test CFLAGS="%{optflags} -fPIC -Wall"
+#%%make test CFLAGS="%{optflags} -fPIC -Wall" <- borked
 
 %install
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}

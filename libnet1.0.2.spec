@@ -4,7 +4,7 @@
 Summary:	A C library for portable packet creation
 Name:		libnet%{major}
 Version:	1.0.2a
-Release:	%mkrel 11
+Release:	%mkrel 12
 License:	BSD
 Group:		System/Libraries
 URL:		http://www.packetfactory.net/libnet
@@ -107,6 +107,8 @@ This package contains the static libnet library.
 chmod 644 README doc/CHANGELOG*
 
 %build
+# ugly but fixes it...
+cp %{_datadir}/automake-1.*/config.* .
 
 %configure --with-pf_packet=yes 
 %make CFLAGS="%{optflags} -fPIC -Wall"

@@ -4,7 +4,7 @@
 Summary:	A C library for portable packet creation
 Name:		libnet%{major}
 Version:	1.0.2a
-Release:	%mkrel 14
+Release:	%mkrel 15
 License:	BSD
 Group:		System/Libraries
 URL:		http://www.packetfactory.net/libnet

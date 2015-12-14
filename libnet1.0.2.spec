@@ -1,5 +1,6 @@
 %define	major	1.0.2
 %define libname	%mklibname net %{major}
+%define debug_package %{nil}
 
 Summary:	A C library for portable packet creation
 Name:		libnet%{major}
@@ -61,6 +62,8 @@ chmod 644 README doc/CHANGELOG*
 %build
 # ugly but fixes it...
 cp %{_datadir}/automake-1.*/config.* .
+
+export CC=gcc
 
 %configure2_5x \
 	--disable-static \

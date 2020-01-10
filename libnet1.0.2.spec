@@ -54,7 +54,7 @@ files.
 
 %prep
 %setup -qn Libnet-%{version}
-%apply_patches
+%autopatch -p1
 
 # fix file permissions
 chmod 644 README doc/CHANGELOG*

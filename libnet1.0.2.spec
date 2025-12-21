@@ -12,6 +12,11 @@ Url:		https://www.packetfactory.net/libnet
 Source0:	http://www.packetfactory.net/libnet/dist/libnet-%{version}.tar.bz2
 Patch0:		Libnet-1.0.2a-1.0.2a.diff
 Patch1:		libnet-1.0.2a-strings.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	libtool
 BuildRequires:	libpcap-devel
 
